@@ -94,15 +94,91 @@ console.log(gen.next().value); // 20
 ## Assignment
 
 - Create a function that takes two arguments and returns the sum of those arguments.
+```javascript
+  function add(x,y){
+  return x + y;
+  }
+  console.log(add(3, 5)); // answer is 8
+  console.log(add(10, 15)); // answer is 25
+  console.log(add(-2, 7)); // answer is 5
+```
 
 - Create a function that takes two arguments and checks if the first argument is greater than the second argument.
+```javascript
+  function isGreater(x, y) {
+    if (x > y) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isGreater(10, 5)); // Output: true
+console.log(isGreater(5, 10)); // Output: false
+console.log(isGreater(3, 3));  // Output: false
+
+  console.log(isGreater(10, 5)); //  true
+  console.log(isGreater(5, 10)); //  false
+  console.log(isGreater(3, 3));  //  false
+```
 
 - Create a function that takes a number and returns the square of that number.
+```javascript
+function square(num){
+  return num*num;
+  }
+  console.log(square(4)); // 16
+  console.log(square(-5)); // 25
+  console.log(square(1.5)); // 2.25
+```
 
 - Create a function that takes a number and returns the cube of that number.
+```javascript
+ function cube(num){
+   return num* num *num;
+  }
+  console.log(cube(3)); // 27
+  console.log(cube(-2)); // -8
+  console.log(cube(1.5)); // 3.375
+```
 
 - Create a function that takes a number and returns the factorial of that number.
+ ```javascript
+ function factorial(num) {
+    if (num === 0 || num === 1) return 1;
+    let result = 1;
+    for (let i = 2; i <= num; i++) {
+        result *= i;
+    }
+    return result;
+}  
+  console.log(factorial(5)); // Answer:120 (5 * 4 * 3 * 2 * 1)
+  console.log(factorial(0)); // Answer: 1 ( 0! = 1)
+  console.log(factorial(3)); // Answer: 6 (3 * 2 * 1)
+```
 
 - Create a function that takes a number and returns the Fibonacci series up to that number.
+```javascript
+function fibonacciSeries(num) {
+    let series = [0, 1];
+    while (true) {
+        let next = series[series.length - 1] + series[series.length - 2];
+        if (next > num) break;
+        series.push(next);
+    }
+    return series;
+}
+console.log(fibonacciSeries(20)); // Answer: [0, 1, 1, 2, 3, 5, 8, 13]
+console.log(fibonacciSeries(10)); // Answer: [0, 1, 1, 2, 3, 5, 8]
+console.log(fibonacciSeries(50)); // Answer: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+```
 
 - Create a function that takes a number and returns the reverse of that number.
+```javascript
+function reverseNumber(num) {
+    const reversed = num.toString().split('').reverse().join('');
+    return parseFloat(reversed) * Math.sign(num);
+}
+console.log(reverseNumber(12345));   // Answer: 54321
+console.log(reverseNumber(-12345));  // Answer: -54321
+```
